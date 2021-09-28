@@ -9,19 +9,31 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function bgColor() {
 
     // your code here
+    //code id html
 
-    const redButton = getElementbyid("red")
-    const greenButton = getElementbyid("green")
-    const yellowButton = getElementbyid("yellow")
-    const blueButton = getElementbyid("blue")
+    document.getElementById("red").addEventListener("click", bgColorRed);
+    document.getElementById("green").addEventListener("click", bgColorGreen);
+    document.getElementById("yellow").addEventListener("click", bgColorYellow);
+    document.getElementById("blue").addEventListener("click", bgColorBlue);
 
-    //code color change
+    //code function background color change
 
-    function backgroundColor()
-    function backgroundColor()
-    function backgroundColor()
-    function backgroundColor()
+    function bgColorRed(){
+        document.body.style.backgroundColor = "red";
+    }
+
+    function bgColorGreen(){
+        document.body.style.backgroundColor = "Green";
+    }
+
+    function bgColorYellow(){
+        document.body.style.backgroundColor = "Yellow";
+    }
+
+    function bgColorBlue(){
+        document.body.style.backgroundColor = "Blue";
+    }
 })();
