@@ -20,7 +20,7 @@
     var c = document.getElementById("dob-year")
 
     function getAge(){
-        var date = Date.now() - c.value - ;
+        var date = Date.now() - c.value;
         var age = new date;
 
             return getAge(math.abs(age.getUTCFullYear() - date);

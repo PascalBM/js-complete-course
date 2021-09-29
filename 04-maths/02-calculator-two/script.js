@@ -14,6 +14,8 @@
 
     var performOperation = function(operation) {
         // perform the operation
+
+        switch ("")
     };
 
     Array.from(document.querySelectorAll("button.operator")).forEach(function($btn) {
