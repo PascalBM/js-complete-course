@@ -13,4 +13,19 @@
 
     // your code here
 
+    document.getElementById("run").addEventListener("click",getAge)
+
+  var a =  document.getElementById("dob-day")
+   var b =  document.getElementById("dob-month")
+    var c = document.getElementById("dob-year")
+
+    function getAge(){
+        var date = Date.now() - c.value - ;
+        var age = new date;
+
+            return getAge(math.abs(age.getUTCFullYear() - date);
+
+
+    }
+
 })();

@@ -19,6 +19,15 @@
         "../../_shared/img/map.svg",
     ];
 
-    // your code here
+    //*
+    document.getElementById("next").addEventListener(
+      const image= document.getElementsByTagName()
+    )
+
+    //js select by tag google
+
+    // image dot src not index 3 evry time use counter* at the end reset the index
+    // * make an if index end gallery reset
+    // you can also use the get attribute.
 
 })();

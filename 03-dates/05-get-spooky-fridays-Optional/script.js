@@ -13,4 +13,19 @@
 
     // your code here
 
+    document.getElementById("run").addEventListener("click",fridayThe13thsIn());
+
+    function fridayThe13thsIn(month) {
+        var count = 0;
+        for (var month=0; month<12; month++) {
+            var d = new Date(year,month,13);
+            if(d.getMonth() == 5){
+                count++;
+            }
+        }
+        return count;
+    }
+
+    document.write()
+
 })();
