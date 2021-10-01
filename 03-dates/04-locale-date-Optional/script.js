@@ -14,6 +14,39 @@
     // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
 
     // your code here
-    const d = new Date();
-    document.getElementById("target").innerHTML = d.toUTCString();
+    const text = document.getElementById('target');
+    const week = [
+        'Sunday',
+        'Monday',
+        'Tuesday',
+        'Wednesday',
+        'Thursday',
+        'Friday',
+        'Saturday',
+        'Sunday'
+    ];
+    const months = [
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+        'July',
+        'August',
+        'September',
+        'October',
+        'November',
+        'December'
+    ]
+
+    let date = new Date();
+    let time = week[date.getDay()] + " "
+        + date.getDate() + " "
+        + months[date.getMonth()]  + " "
+        + date.getFullYear() + ", "
+        + date.getHours() + ":"
+        + ((date.getMinutes() < 10 ? '0' : '') + date.getMinutes());
+
+    text.innerHTML = `${time}`
 })();

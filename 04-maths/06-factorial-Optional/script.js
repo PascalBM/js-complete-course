@@ -16,7 +16,23 @@
     document.getElementById("run").addEventListener("click", function() {
 
         // your code here
+        const parent = document.querySelector('.material');
+        const resultTag = document.createElement('h2');
+        parent.appendChild(resultTag);
 
+        const  num = document.getElementById('number');
+
+        num.addEventListener("keypress", function(event) {
+            if (event.keyCode == 13)
+                run.click();
+        });
+        let result = num.value;
+
+        if (result === 0 || result === 1) return 1;
+
+        for (var i = result - 1; i >= 1; i--) result *= i;
+
+        resultTag.innerHTML = `${result}`;
     });
 
 })();
