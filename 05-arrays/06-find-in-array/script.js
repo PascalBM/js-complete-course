@@ -90,5 +90,16 @@
     ];
 
     // your code here
+    document.getElementById("run").addEventListener("click", function (){
+        people.find(function(people, index) {
+            if (people.firstname === "Jean" && people.lastname === "Dupont")
+                console.log(people.email);
+        })
+        let index = people.findIndex(men => men.firstname === "Jean");
+        console.log(index);
+    })
+
+
+
 
 })();

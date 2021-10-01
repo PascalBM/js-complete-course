@@ -90,5 +90,11 @@
     ];
 
     // your code here
+    document.getElementById("run").addEventListener("click", function (){
+            let ageArray = people.map(({ age }) => age);
+            let totAge = (previousValue, currentValue) => previousValue + currentValue;
+            console.log(ageArray.reduce(totAge));
+        }
+    )
 
 })();

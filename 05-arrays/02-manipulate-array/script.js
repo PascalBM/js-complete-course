@@ -25,7 +25,15 @@
     ];
 
     // your code here
+    //remove the first and the last element, add an element "banana" at the start of the array,
+    //               and add an element "kiwi" at the end.
 document.getElementById("run").addEventListener("click",function () {
+    fruits.shift("pomme");
+    fruits.splice(9);
+    fruits.unshift("bannana");
+    fruits.push("kiwi");
+    console.log(fruits)
+
 
 
 })
