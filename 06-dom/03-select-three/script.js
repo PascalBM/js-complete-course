@@ -12,5 +12,15 @@
 (function() {
 
     // your code here
+    // get the value of class in html and make the class a const
+    const p = document.getElementsByClassName("target");
+
+    //use the for(let..) to change all classes values
+    for (let i = 0; i < p.length; i++) {
+        p[i].innerHTML = "Owned.";
+    }
+
+
+
 
 })();

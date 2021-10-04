@@ -12,5 +12,23 @@
 (function() {
 
     // your code here
+    //Inside the element with id "target", create an HTML table with 1 column and 10 rows.
+    const target = document.getElementById("target");
+    let tbl = document.createElement("table");
+    target.appendChild(tbl)
+
+    for (let i = 1; i <= 10; i++) {
+        // creates a table row
+        let row = document.createElement("tr");
+        tbl.appendChild(row)
+        let cell = document.createElement("td");
+            let cellText = document.createTextNode("cell in row "+i+", column ");
+            cell.appendChild(cellText);
+            row.appendChild(cell);
+        }
+
+
+
+
 
 })();
