@@ -11,4 +11,8 @@
 
 (() => {
     // your code here
+    fetch('http://localhost:63342/js-complete-course/_shared/api.json')
+        .then(response => response.json())
+        .then(data => console.log(data));
+    console.log()
 })();
