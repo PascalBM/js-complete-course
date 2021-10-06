@@ -11,18 +11,37 @@
 
 (() => {
     // your code here
-    //When you click on the button, get the id from the form, then get the corresponding X-Men from the API and display it in the tag whose id is "target". Use the tag template to reproduce a suitable html structure
-    let target = document.getElementById("target")
-    document.getElementById("hero-id")
-    document.getElementById("run").addEventListener("click", function () {
-        fetch('http://localhost:63342/js-complete-course/_shared/api.json')
-            .then(response => response.json())
-            .then(data => console.log(data));
+    //declared the button and input
+    var button = document.getElementById('run');
+    var input = document.getElementById('hero-id');
 
+    //used the async function
+    var getData = async () => {
+        //took the api with the fetch
+        await fetch('../../_shared/api.json')
+            .then(result => result.json())
+            .then(data => {
+                //made an event listener with the declared button to start a function when the button is clicked.
+                button.addEventListener('click', () => {
+                    data.heroes.map(obj => {
+                        if (input.value == obj.id) {
+                            //declared a template clone inside a let
+                            let myHero = document.getElementById('tpl-hero').content.cloneNode(true);
+                            //used the template with a querySelector.
+                            myHero.querySelector('.name').innerText = obj.name;
+                            myHero.querySelector('.alter-ego').innerText = obj.alterEgo;
+                            myHero.querySelector('.powers').innerText = obj.abilities;
+                            //put the content inside the target
+                            document.getElementById("target").appendChild(myHero);
 
-    } )
-
-
-
-
+                            //Asked for little for the help template
+                        }
+                    })
+                })
+            })
+    }
+    getData();
 })();
+
+
+
