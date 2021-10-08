@@ -13,12 +13,13 @@
 
     // your code here
 
+    // made an event listener with function fridays month when the button is cliked
     document.getElementById("run").addEventListener("click", fridaysMonth());
-
+    // in the function
     function fridaysMonth(year) {
-        var count = 0;
-        for (var month=0; month<12; month++) {
-            var d = new Date(year,month,13);
+        var count = 0;  // declared a variable count to 0
+        for (var month=0; month<12; month++) {  //variable month=0; month is smaller than 12 and icremment
+            var d = new Date(year,month,13); //variable year
             if(d.getDay() == 5){
                 count++;
             }

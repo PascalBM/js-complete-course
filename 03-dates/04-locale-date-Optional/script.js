@@ -14,6 +14,7 @@
     // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
 
     // your code here
+    //declared a const with with the element id target and created a new const week with an array
     const text = document.getElementById('target');
     const week = [
         'Sunday',
@@ -25,6 +26,7 @@
         'Saturday',
         'Sunday'
     ];
+    // created an array const months
     const months = [
         'January',
         'February',
@@ -40,6 +42,7 @@
         'December'
     ]
 
+    // declared let date to new date and let time with a week array of date+ getDay func
     let date = new Date();
     let time = week[date.getDay()] + " "
         + date.getDate() + " "
@@ -48,5 +51,6 @@
         + date.getHours() + ":"
         + ((date.getMinutes() < 10 ? '0' : '') + date.getMinutes());
 
+    //write it in html
     text.innerHTML = `${time}`
 })();

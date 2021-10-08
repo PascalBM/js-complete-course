@@ -12,5 +12,13 @@
 (function() {
 
     // your code here
+    /*Inside the element with id "target", create an HTML table with 10 columns and 10 rows, containing the
+    tables of multiplication from 1 to 10.*/
+
+    //declared the tar
+    let target = document.getElementById("target");
+
+    target =>
+
 
 })();
